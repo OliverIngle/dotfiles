@@ -1,0 +1,15 @@
+[user]
+	email = oliver.ingle@gmail.com
+	name = oliveringle
+
+[core]
+	editor = nvim
+
+[color]
+	ui = false
+
+[help]
+	autocorrect = 1
+
+[init]
+  defaultBranch = main
