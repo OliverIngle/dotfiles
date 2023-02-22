@@ -37,6 +37,11 @@ packer.init({
 
 return packer.startup(function(use)
 
+
+
+
+
+
     use "wbthomason/packer.nvim"    -- Packer
     use "joshdick/onedark.vim"      -- Onedark theme
     use 'tpope/vim-fugitive'        --
@@ -49,12 +54,25 @@ return packer.startup(function(use)
     use 'hrsh7th/cmp-path'          -- |
     use 'hrsh7th/cmp-cmdline'       -- |
     use 'hrsh7th/nvim-cmp'          -- |
+    use 'romgrk/barbar.nvim'
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+              'nvim-tree/nvim-web-devicons', -- optional, for file icons
+         },
+         tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
     use({"L3MON4D3/LuaSnip", tag = "v<1>.*"})
-    use 'preservim/nerdtree'        -- file tree
-    use 'Xuyuanp/nerdtree-git-plugin'--|
-    use 'ryanoasis/vim-devicons'    -- |
-    use 'tiagofumo/vim-nerdtree-syntax-highlight'
-    use 'PhilRunninger/nerdtree-buffer-ops'
+    use {
+        'goolord/alpha-nvim',
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.dashboard'.config)
+        end
+    }
+
+
+
+
 
     if PACKER_BOOTSTRAP then
 		require("packer").sync()
