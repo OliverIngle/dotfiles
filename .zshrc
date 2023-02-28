@@ -44,7 +44,8 @@ alias ls='lsd --tree --depth=1'
 alias l2='lsd --tree --depth=2'
 alias la='lsd --tree --depth=1 --all'
 
-alias mid='clear; echo -e "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"'
+#alias mid='clear; echo -e "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"'
+#alias midls='clear; echo -e "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"; ls; echo -e "\n\n"'
 
 alias cdh='cd /home/oliver'
 
@@ -54,7 +55,15 @@ alias cmatrix='cmatrix -C magenta'
 
 alias offn='shutdown now'
 alias rebt='reboot'
+alias :q='exit'
 
 alias vi='nvim'
 alias nv='nvim'
 alias vim='nvim'
+
+function mid() {
+    clear;
+    echo -e "\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+    eval $1
+    echo -e "\n\n"
+}
