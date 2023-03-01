@@ -38,31 +38,21 @@ packer.init({
 return packer.startup(function(use)
 
 
-
-
-
-
     use "wbthomason/packer.nvim"    -- Packer
-    use "joshdick/onedark.vim"      -- Onedark theme
-    use 'tpope/vim-fugitive'        --
-    use 'tpope/vim-commentary'      -- Better commenting
+
+    -- ------ LSP ------
+    use 'neovim/nvim-lspconfig'
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
+
+    -- ------ Appearence ------
+    use 'joshdick/onedark.vim'      -- Onedark theme
     use 'itchyny/lightline.vim'     -- Better status bar
-    use 'neovim/nvim-lspconfig'     -- Language Server Protocol
-    use 'williamboman/nvim-lsp-installer' -- |
-    use 'hrsh7th/cmp-nvim-lsp'      -- Completions
-    use 'hrsh7th/cmp-buffer'        -- |
-    use 'hrsh7th/cmp-path'          -- |
-    use 'hrsh7th/cmp-cmdline'       -- |
-    use 'hrsh7th/nvim-cmp'          -- |
-    use 'hrsh7th/cmp-vsnip'
-    use 'hrsh7th/vim-vsnip'
     use 'romgrk/barbar.nvim'
+    use 'nvim-tree/nvim-web-devicons'
     use {
         'nvim-tree/nvim-tree.lua',
-        requires = {
-              'nvim-tree/nvim-web-devicons', -- optional, for file icons
-         },
-         tag = 'nightly' -- optional, updated every week. (see issue #1193)
+         tag = 'nightly'
     }
     use {
         'goolord/alpha-nvim',
@@ -70,6 +60,15 @@ return packer.startup(function(use)
             require'alpha'.setup(require'alpha.themes.dashboard'.config)
         end
     }
+    
+    -- ------ Completions ------
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-vsnip'
+    use 'hrsh7th/vim-vsnip'
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
@@ -77,6 +76,11 @@ return packer.startup(function(use)
             ts_update()
         end,
     }
+
+    -- ------ Other functionalities ------
+    use 'tpope/vim-fugitive'        --
+    use 'tpope/vim-commentary'      -- Better commenting
+    use 'mfussenegger/nvim-dap'
 
 
 

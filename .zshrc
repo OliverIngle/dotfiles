@@ -16,7 +16,8 @@ PS1='%~ %F{cyan}${vcs_info_msg_0_}%f%F{magenta}❯%f '
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-
+# ------ Go ------ #
+export PATH=$PATH:/usr/local/go/bin
 
 # ------ Oh My zsh ------ #
 export ZSH="$HOME/.oh-my-zsh"
