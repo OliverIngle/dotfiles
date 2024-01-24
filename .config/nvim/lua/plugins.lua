@@ -60,7 +60,13 @@ return packer.startup(function(use)
             require'alpha'.setup(require'alpha.themes.dashboard'.config)
         end
     }
-    
+    -- ------ Terminal ------
+    use {
+        "akinsho/toggleterm.nvim", tag = '*', config = function()
+            require("toggleterm").setup()
+        end
+    }
+
     -- ------ Completions ------
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
@@ -71,12 +77,8 @@ return packer.startup(function(use)
     use 'hrsh7th/vim-vsnip'
     use {
         'nvim-treesitter/nvim-treesitter',
-        run = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
-        end,
+        run = ':TSUpdate'
     }
-
     -- ------ Other functionalities ------
     use 'tpope/vim-fugitive'        --
     use 'tpope/vim-commentary'      -- Better commenting
