@@ -75,6 +75,7 @@ return packer.startup(function(use)
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-vsnip'
     use 'hrsh7th/vim-vsnip'
+    -- ------ Syntax Highliting ------
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
@@ -83,6 +84,7 @@ return packer.startup(function(use)
     use 'tpope/vim-fugitive'        --
     use 'tpope/vim-commentary'      -- Better commenting
     use 'mfussenegger/nvim-dap'
+    use 'lervag/vimtex'
 
 
 

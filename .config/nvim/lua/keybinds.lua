@@ -7,14 +7,15 @@ function map(mode, lhs, rhs, opts)
 end
 
 
+
 -- window navigation
-map("n", "<Left>", "<C-w>h")
-map("n", "<Down>", "<C-w>j")
-map("n", "<Up>", "<C-w>k")
-map("n", "<Right>", "<C-w>l")
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-k>", "<C-w>k")
+map("n", "<C-l>", "<C-w>l")
 -- tab navigation
-map("n", "<C-l>", ":BufferNext<Enter>", {silent = true})
-map("n", "<C-h>", ":BufferPrevious<Enter>", {silent = true})
+map("n", "<Right>", ":BufferNext<Enter>", {silent = true})
+map("n", "<Left>", ":BufferPrevious<Enter>", {silent = true})
 -- nvim-tree
 map("n", "<Leader>e", ":NvimTreeToggle<Enter>", { silent = true })
 -- terminal

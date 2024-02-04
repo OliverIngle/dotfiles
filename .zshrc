@@ -45,3 +45,9 @@ source ~/.files/aliases.sh
 
 # ------ Functions ------#
 source ~/.files/functions.sh
+
+# ------ Colors ------ #
+source ~/.files/colors.sh
+
+# ------ Wifi ------ #
+source ~/.files/wifi.sh
