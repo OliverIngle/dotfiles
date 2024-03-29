@@ -85,9 +85,10 @@ return packer.startup(function(use)
     use 'tpope/vim-commentary'      -- Better commenting
     use 'mfussenegger/nvim-dap'
     use 'lervag/vimtex'
-
-
-
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
 
     if PACKER_BOOTSTRAP then
 		require("packer").sync()
