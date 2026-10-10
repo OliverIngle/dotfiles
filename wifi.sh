@@ -4,7 +4,7 @@ wifi(){
 
     cmd=$1
 
-    cecho white "󰖩 WiFi"
+    cecho white "\n\t󰖩 WiFi\n"
 
     case $cmd in
 
@@ -36,15 +36,29 @@ wifi(){
             ;;
 
         deconnect)
-            nmcli connection down $2 &>
+            nmcli connection down $2 &> /dev/null
+            if [ $? -eq 0 ]; then
+                cecho green " Success"
+            else
+                cecho red " $2 is not an active network"
+            fi
             ;;
 
         delete)
-            nmcli connection delete $2
+            nmcli connection delete $2 &> /dev/null
+            if [ $? -eq 0 ]; then
+                cecho green " Success"
+            else
+                cecho red " $2 isn't a registered connection"
+            fi
+            ;;
+
+        show)
+            nmcli device wifi show-password
             ;;
 
         help | "-h" | "--help" )
-            echo heeelppp
+            cat ~/.files/wifi.help.txt
             ;;
 
         *)

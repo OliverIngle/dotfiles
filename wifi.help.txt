@@ -1,0 +1,9 @@
+Commands:
+    
+    on                  Turns on wifi
+    off                 Turns off wifi
+    list                Lists all available networks
+    status              Current status of wifi
+    connect <ifname>    Attemps to connect to network <ifname> and prompts for password
+    deconnect <ifname>  Deconnects computer from inputted network
+    delete <ifname>     Deletes connection information of inputted network

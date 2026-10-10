@@ -5,6 +5,7 @@ PS1="\W ❯ "
 # ------ Aliases ------
 alias vi='nvim'
 alias vim='nvim'
+alias nv='nvim'
 alias ls='lsd'
 alias la='lsd -a'
 # ------ Bash completions ------

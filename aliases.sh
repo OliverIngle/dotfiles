@@ -26,3 +26,5 @@ alias vi='nvim'
 alias nv='nvim'
 alias vim='nvim'
 
+# --- Tor --- #
+alias tor='cd ~/tor-browser; ./start-tor-browser.desktop'
