@@ -90,6 +90,24 @@ return packer.startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })
 
+    -- ------ Theme ------
+    use ({
+      'sainnhe/gruvbox-material',
+      lazy = false,
+      priority = 1000,
+      config = function()
+        -- Optionally configure and load the colorscheme
+        -- directly inside the plugin declaration.
+        vim.g.gruvbox_material_enable_italic = true
+        vim.cmd.colorscheme('gruvbox-material')
+      end
+    })
+    -- ------ R.vim ------
+    use ({
+    "R-nvim/R.nvim",
+     -- Only required if you also set defaults.lazy = true
+    lazy = false
+    })
     if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end

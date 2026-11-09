@@ -28,3 +28,10 @@ alias vim='nvim'
 
 # --- Tor --- #
 alias tor='cd ~/tor-browser; ./start-tor-browser.desktop'
+
+# --- University ---
+alias univ='cd ~/Desktop/L3Ecosphere/'
+alias teledec='cd ~/Desktop/L3Ecosphere/Teledetection'
+alias biostat='cd ~/Desktop/L3Ecosphere/Biostat'
+alias english='cd ~/Desktop/L3Ecosphere/english'
+alias stage='cd ~/Desktop/L3Ecosphere/stage'
